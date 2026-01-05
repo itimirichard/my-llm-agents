@@ -8,13 +8,13 @@ to perform to best answer the query. Output {NUMBER_OF_SEARCHES} terms to query 
 
 class WebSearchItem(BaseModel):
     reason: str
-    "Your justifications for why this search is important."
+    """Your justifications for why this search is important."""
     query: str
-    "The search query to perform."
+    """The search query to perform."""
 
 class WebSearchPlan(BaseModel):
     searches: list[WebSearchItem]
-    "The set of search queries to perform."
+    """The set of search queries to perform."""
 
 planner_agent = Agent(
     name="WebSearchPlanner",
